@@ -12,6 +12,14 @@
       "public/**/*.js": [
         "prettier-standard",
         "git add"
+      ],
+      "routes/**/*.js": [
+        "prettier-standard",
+        "git add"
+      ],
+      "views/**/*.js": [
+        "prettier-standard",
+        "git add"
       ]
     }
   },
@@ -40,8 +48,6 @@
     "pre-commit": "^1.2.2",
     "prettier-standard": "^1.0.6",
     "react": "^15.4.2",
-    "react-dom": "^15.4.2",
-    "standard": "^9.0.2",
-    "standard-prettier": "^1.0.1"
+    "react-dom": "^15.4.2"
   }
 }
