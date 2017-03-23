@@ -5,7 +5,15 @@
   "scripts": {
     "start": "node ./bin/www",
     "debugger": "DEBUG=anna:* npm start",
-    "prettier-code": "prettier-standard public/**/*.js"
+    "prettier-code": "lint-staged"
+  },
+  "lint-staged": {
+    "linters": {
+      "public/**/*.js": [
+        "prettier-standard",
+        "git add"
+      ]
+    }
   },
   "pre-commit": [
     "prettier-code"
@@ -28,6 +36,7 @@
     "babel-preset-stage-0": "^6.22.0",
     "babel-register": "^6.24.0",
     "express-react-views": "^0.10.2",
+    "lint-staged": "^3.4.0",
     "pre-commit": "^1.2.2",
     "prettier-standard": "^1.0.6",
     "react": "^15.4.2",
