@@ -1,15 +1,17 @@
-var React = require('react');
-var DefaultLayout = require('./layouts/default');
- 
-var HelloMessage = React.createClass({
-  render: function() {
-    return (
-      <DefaultLayout title={this.props.title}>
-        <div>Hello {this.props.name}</div>
-        <script dangerouslySetInnerHTML={{__html:"window.APP={}"}}></script>
-      </DefaultLayout>
-    );
-  }
-});
- 
-module.exports = HelloMessage
+import React from 'react'
+import DefaultLayout from './layouts/default'
+
+export default props => (
+  <DefaultLayout title={props.title}>
+    <div id="root" dangerouslySetInnerHTML={{__html: props.content}} />
+    <script
+      dangerouslySetInnerHTML={{
+        __html: `
+      (function(){
+        window.__INIT_STATE = ${JSON.stringify('')}
+      }())
+      `,
+      }}
+    />
+  </DefaultLayout>
+)
