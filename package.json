@@ -5,16 +5,10 @@
   "scripts": {
     "start": "node ./bin/www",
     "debugger": "DEBUG=anna:* npm start",
-    "lint:staged": "lint-staged"
-  },
-  "lint-staged": {
-    "public/**/*.js": [
-      "standard-prettier --write",
-      "git add"
-    ]
+    "prettier-code": "prettier-standard public/**/*.js"
   },
   "pre-commit": [
-    "lint:staged"
+    "prettier-code"
   ],
   "dependencies": {
     "body-parser": "~1.16.0",
@@ -35,8 +29,10 @@
     "babel-register": "^6.24.0",
     "express-react-views": "^0.10.2",
     "pre-commit": "^1.2.2",
+    "prettier-standard": "^1.0.6",
     "react": "^15.4.2",
     "react-dom": "^15.4.2",
+    "standard": "^9.0.2",
     "standard-prettier": "^1.0.1"
   }
 }
