@@ -4,8 +4,10 @@
   "private": true,
   "scripts": {
     "start": "node ./bin/www",
-    "debugger": "DEBUG=anna:* npm start"
+    "debugger": "DEBUG=anna:* npm start",
+    "pre-commit": "echo 'pre-commit checks...' && exit 0"
   },
+  "pre-commit":["precommit-msg"],
   "dependencies": {
     "body-parser": "~1.16.0",
     "cookie-parser": "~1.4.3",
@@ -24,6 +26,7 @@
     "babel-preset-stage-0": "^6.22.0",
     "babel-register": "^6.24.0",
     "express-react-views": "^0.10.2",
+    "pre-commit": "^1.2.2",
     "react": "^15.4.2",
     "react-dom": "^15.4.2"
   }
