@@ -1,16 +1,10 @@
-var React = require('react')
- 
-var DefaultLayout = React.createClass({
-  render: function() {
-    return (
-      <html>
-        <head>
-          <title>{this.props.title}</title>
-        </head>
-        <body>{this.props.children}</body>
-      </html>
-    )
-  }
-})
- 
-module.exports = DefaultLayout
+import React from 'react'
+
+export default props => (
+  <html>
+    <head>
+      <title>{props.title}</title>
+    </head>
+    <body>{props.children}</body>
+  </html>
+)
