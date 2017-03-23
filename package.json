@@ -5,9 +5,17 @@
   "scripts": {
     "start": "node ./bin/www",
     "debugger": "DEBUG=anna:* npm start",
-    "pre-commit": "echo 'pre-commit checks...' && exit 0"
+    "lint:staged": "lint-staged"
   },
-  "pre-commit":["precommit-msg"],
+  "lint-staged": {
+    "public/**/*.js": [
+      "standard-prettier --write",
+      "git add"
+    ]
+  },
+  "pre-commit": [
+    "lint:staged"
+  ],
   "dependencies": {
     "body-parser": "~1.16.0",
     "cookie-parser": "~1.4.3",
@@ -28,6 +36,7 @@
     "express-react-views": "^0.10.2",
     "pre-commit": "^1.2.2",
     "react": "^15.4.2",
-    "react-dom": "^15.4.2"
+    "react-dom": "^15.4.2",
+    "standard-prettier": "^1.0.1"
   }
 }
