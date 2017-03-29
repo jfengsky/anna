@@ -1,9 +1,5 @@
 import React from 'react'
 import ReactDOM from 'react-dom'
-// export default (params) => (
-//     <div>root</div>
-// )
+import Root from './Root'
 
-const root = param => <div>renderToString</div>
-
-export default content
+ReactDOM.render(<Root />, document.getElementById('root'))

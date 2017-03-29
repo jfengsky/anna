@@ -13,5 +13,7 @@ export default props => (
       `,
       }}
     />
+    <script src="/vendor.js" />
+    <script src="/index.js" />
   </DefaultLayout>
 )

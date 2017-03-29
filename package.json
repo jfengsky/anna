@@ -4,7 +4,7 @@
   "private": true,
   "scripts": {
     "start": "npm run server & npm run watch",
-    "server": "node index.js",
+    "server": "node-dev index.js",
     "debugger": "DEBUG=anna:* npm start",
     "watch": "webpack --progress --colors --watch",
     "prettier-code": "lint-staged"

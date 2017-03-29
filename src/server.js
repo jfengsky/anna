@@ -1,11 +1,7 @@
 import React from 'react'
 import {renderToString} from 'react-dom/server'
-// export default (params) => (
-//     <div>root</div>
-// )
+import Root from './Root'
 
-const root = param => <div>renderToString</div>
-
-const content = renderToString(root())
+const content = renderToString(<Root />)
 
 export default content
