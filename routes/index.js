@@ -1,5 +1,5 @@
 import express from 'express'
-import content from '../src'
+import content from '../src/server'
 
 const router = express.Router()
 

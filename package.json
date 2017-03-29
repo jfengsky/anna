@@ -3,8 +3,10 @@
   "version": "0.0.1",
   "private": true,
   "scripts": {
-    "start": "node ./bin/www",
+    "start": "npm run server & npm run watch",
+    "server": "node index.js",
     "debugger": "DEBUG=anna:* npm start",
+    "watch": "webpack --progress --colors --watch",
     "prettier-code": "lint-staged"
   },
   "lint-staged": {
@@ -53,6 +55,7 @@
     "prettier-standard": "^1.0.6",
     "react": "^15.4.2",
     "react-dom": "^15.4.2",
+    "webpack": "^2.3.2",
     "react-router-dom": "^4.0.0"
   }
 }
