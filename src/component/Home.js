@@ -1,14 +1,9 @@
-import React, {Component} from 'react'
-import {Link} from 'react-router'
+import React from 'react'
 
-class Home extends Component {
-  render() {
-    return (
-      <div>
-        Hello Content Home! ... <Link to="/content">content</Link>
-      </div>
-    )
-  }
-}
+const Home = () => (
+  <div>
+    Hello Content Home! ...
+  </div>
+)
 
 export default Home

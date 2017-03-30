@@ -5,7 +5,6 @@ class App extends Component {
     return (
       <div>
         <span className="header">This is a react head?</span><br />
-        {this.props.children}
         This is footer!
       </div>
     )
