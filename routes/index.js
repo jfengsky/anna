@@ -1,24 +1,10 @@
 import express from 'express'
-import React from 'react'
-import {renderToString} from 'react-dom/server'
-import {StaticRouter} from 'react-router-dom'
-import Root from '../src/Root'
-// import content from '../src/server'
-
+import indexHTML from './indexHTML'
 const router = express.Router()
 
+/* GET home page. */
 router.get('/', function(req, res, next) {
-  const context = {}
-  const content = renderToString(
-    <StaticRouter location={req.url} context={context}>
-      <Root />
-    </StaticRouter>,
-  )
-  console.log(content)
-  res.render('index', {
-    title: 'Express',
-    content,
-  })
+  res.render('index', {title: 'Express', content: indexHTML})
 })
 
-export default router
+module.exports = router

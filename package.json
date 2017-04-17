@@ -55,7 +55,11 @@
     "prettier-standard": "^1.0.6",
     "react": "^15.4.2",
     "react-dom": "^15.4.2",
+<<<<<<< HEAD
     "react-router-dom": "^4.0.0",
+=======
+    "react-router": "^4.0.0",
+>>>>>>> cache
     "webpack": "^2.3.2"
   }
 }
