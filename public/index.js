@@ -11993,7 +11993,13 @@ object-assign
           {
             key: 'render',
             value: function render() {
-              return _react2.default.createElement(Root, null)
+              return _react2.default.createElement(
+                'div',
+                null,
+                _react2.default.createElement(Home, null),
+                _react2.default.createElement(Api, null),
+                _react2.default.createElement(Edit, null),
+              )
             },
           },
         ])
@@ -12005,6 +12011,18 @@ object-assign
 
       var Root = function Root() {
         return _react2.default.createElement('div', null, 'router app')
+      }
+
+      var Home = function Home() {
+        return _react2.default.createElement('div', null, 'Home')
+      }
+
+      var Api = function Api() {
+        return _react2.default.createElement('div', null, 'Api')
+      }
+
+      var Edit = function Edit() {
+        return _react2.default.createElement('div', null, 'Edit')
       }
 
       /***/
