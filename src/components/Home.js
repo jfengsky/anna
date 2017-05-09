@@ -1,12 +1,11 @@
 import React, {Component, PropTypes} from 'react'
+import {connect} from 'react-redux'
+import Counta from './count1/Counta'
 
 class Home extends Component {
   render() {
-    return (
-      <div>
-        Home
-      </div>
-    )
+    const {counta} = this.props
+    return <Counta counta={counta} />
   }
 }
 

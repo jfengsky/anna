@@ -8,7 +8,7 @@ export default props => `
       <script src="/static/vendor.js"></script>
       <script src="/static/bundle.js"></script>
       <script>
-        window.__INITSTATE__ = {}
+        window.__INITSTATE__ = ${JSON.stringify(props.__INITSTATE__ || {})}
       </script>
     </body>
   </html>

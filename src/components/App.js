@@ -15,4 +15,6 @@ const App = props => (
   </div>
 )
 
+// export default connect(mapStateToProps)(App)
+
 export default App
