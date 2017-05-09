@@ -3,7 +3,7 @@ import ReactDOMServer from 'react-dom/server'
 import { StaticRouter } from 'react-router'
 import express from 'express'
 import layout from '../views/layout'
-import App from '../src/App'
+import App from '../src/components/App'
 
 const app = express()
 app.use('/static', express.static('./dist'))

@@ -1,15 +1,15 @@
 import React, {Component, PropTypes} from 'react'
 
-class App extends Component {
+class Api extends Component {
   render() {
     return (
       <div>
-        App test
+        api
       </div>
     )
   }
 }
 
-App.propTypes = {}
+Api.propTypes = {}
 
-export default App
+export default Api
