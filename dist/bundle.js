@@ -28215,11 +28215,11 @@ module.exports = function(module) {
 
 
 Object.defineProperty(exports, "__esModule", {
-    value: true
+  value: true
 });
 exports.default = {
-    counta: 3,
-    countb: 2
+  counta: 3,
+  countb: 2
 };
 
 /***/ })

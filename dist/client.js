@@ -1079,11 +1079,11 @@ exports.default = (0, _reactRedux.connect)(mapStateToProps, mapDispatchToProps)(
 
 
 Object.defineProperty(exports, "__esModule", {
-    value: true
+  value: true
 });
 exports.default = {
-    counta: 3,
-    countb: 2
+  counta: 3,
+  countb: 2
 };
 
 /***/ }),
