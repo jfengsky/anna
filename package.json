@@ -3,10 +3,15 @@
   "version": "0.0.1",
   "private": true,
   "scripts": {
-    "start": "npm run server & npm run watch",
-    "server": "node-dev index.js",
+    "start": "npm run startServer & npm run startClient",
+    "startServer": "npm run watchServer & npm run server",
+    "startClient": "npm run watch & npm run watchClient & npm run client",
+    "watchClient": "webpack --config webpack.config.client.js --progress --colors --watch",
+    "server": "node-dev dist/server.js",
+    "client": "node-dev dist/client.js",
     "debugger": "DEBUG=anna:* npm start",
     "watch": "webpack --progress --colors --watch",
+    "watchServer": "webpack --config webpack.config.server.js --progress --colors --watch",
     "prettier-code": "lint-staged"
   },
   "lint-staged": {
@@ -38,6 +43,7 @@
     "react": "^15.4.2",
     "react-dom": "^15.4.2",
     "react-router": "^4.0.0",
-    "webpack": "^2.3.2"
+    "webpack": "^2.3.2",
+    "webpack-node-externals": "^1.6.0"
   }
 }
